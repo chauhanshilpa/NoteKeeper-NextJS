@@ -13,8 +13,7 @@ const NotesList = ({
   setNotesList,
   handlePageNavigation,
 }: Props) => {
-  
-  const {slug} = useParams();
+  const { slug } = useParams();
 
   const pinnedNotesList = currentNotesList.filter(
     (note) => note.isPinned === true
@@ -24,9 +23,12 @@ const NotesList = ({
   );
 
   function handleNoteDeleteNavigation() {
-    const currentPage = Number(slug[slug.length - 1]);
-    if (currentNotesList.length <= 1 && (currentPage !== 0 || slug !== "/")) {
+    const currentPage = Number(slug);
+    // if()
+    console.log(currentPage)
+    if (currentNotesList.length <= 1 && currentPage !== 0 && !isNaN(currentPage)) {
       handlePageNavigation(currentPage - 1);
+      console.log("deleting")
     }
   }
 

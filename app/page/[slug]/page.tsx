@@ -7,7 +7,7 @@ import AddNoteCard from "../../components/AddNoteCard";
 import { getNotesList } from "../../utils/api";
 import Navbar from "../../components/Navbar";
 import { Tooltip } from "react-tooltip";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 
 function NewDynamicPage() {
   const [notesList, setNotesList] = useState<Note[]>([]);
@@ -15,13 +15,17 @@ function NewDynamicPage() {
   const [currentPage, setCurrentPage] = useState<number>(0);
 
   const router = useRouter();
+  const {slug} = useParams();
+  const page = Number(slug);
 
-  useEffect(() => {
-    (async function () {
-      const response = await getNotesList();
-      setNotesList(response.data.newNotesList);
-    })();
-  }, []);
+    useEffect(() => {
+      setCurrentPage(page);
+      (async function () {
+        const response = await getNotesList();
+        setNotesList(response.data.newNotesList);
+      })();
+      // eslint-disable-next-line
+    }, []);
 
   function handleAddNoteClick() {
     const page = Math.floor(notesList.length / 6);

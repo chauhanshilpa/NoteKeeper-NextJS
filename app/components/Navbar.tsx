@@ -8,7 +8,7 @@ const Navbar = ({ setCurrentPage }: Props) => {
   const router = useRouter();
 
   return (
-    <div className="flex top-0 sticky items-center p-5 shadow-md bg-[#7db146] shadow-[#4A7B43] h-14">
+    <div className="flex top-0 sticky items-center p-5 shadow-md bg-[#7db146] shadow-[#4A7B43] h-14 z-50">
       <div
         className="flex items-center gap-2 italic text-lg"
         onClick={() => {
