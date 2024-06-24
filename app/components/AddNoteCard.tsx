@@ -5,6 +5,7 @@ import { createNote, getNotesList } from "../utils/api";
 import { Note } from "../utils/classModels";
 import { Tooltip } from "react-tooltip";
 import bgApplySound from "../audio/bg-apply.mp3";
+import Image from "next/image";
 
 interface Props {
   setIsAddNoteClicked: React.Dispatch<React.SetStateAction<boolean>>;
@@ -36,10 +37,12 @@ const AddNoteCard = ({
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 mt-5">
       <div className="flex flex-col fixed justify-center bg-gray-50 border shadow p-5 rounded-xl m-auto md:w-[40%] xs:w-[90%]">
-        <img
+        <Image
           src="https://note-keeper.s3.eu-north-1.amazonaws.com/note-keeper-icons/cancel.png"
           alt="cancel"
-          className="h-5 w-5 cursor-pointer self-end hover:scale-125"
+          width={20}
+          height={20}
+          className="cursor-pointer self-end hover:scale-125"
           onClick={() => setIsAddNoteClicked(false)}
           data-tooltip-id="cancel"
           data-tooltip-content="Cancel"

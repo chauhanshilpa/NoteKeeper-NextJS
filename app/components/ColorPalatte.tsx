@@ -1,6 +1,7 @@
 import { RefObject } from "react";
 import { COLORS_LIST, NOTE_BACKGROUND_IMAGES_LIST } from "../utils/constants";
 import { v4 as uuidv4 } from "uuid";
+import Image from "next/image";
 
 interface Props {
   colorPalatteRef: RefObject<HTMLDivElement>;
@@ -31,12 +32,14 @@ const ColorPalatte = ({
       </div>
       <div className="flex justify-center gap-1 flex-wrap p-2">
         {NOTE_BACKGROUND_IMAGES_LIST.map((item) => (
-          <img
+          <Image
             key={uuidv4()}
             src={item.src}
             alt="note-background"
             className="m-1 h-5 w-6 rounded-md cursor-pointer border bg-gray-200"
             onClick={() => handleNoteBackgroundImage(item.src)}
+            width={24}
+            height={20}
           />
         ))}
       </div>

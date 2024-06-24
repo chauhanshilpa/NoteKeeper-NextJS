@@ -17,6 +17,7 @@ import ColorPalatte from "./ColorPalatte";
 import deleteSound from "../audio/delete.mp3";
 import bgApplySound from "../audio/bg-apply.mp3";
 import pinSound from "../audio/pin.wav";
+import Image from "next/image";
 
 interface Props {
   note: Note;
@@ -163,26 +164,32 @@ const NoteCard = ({
                 className="flex justify-end flex-wrap items-center p-1 gap-2 rounded-xl shadow-xl"
                 onMouseEnter={() => setNoteCardHovered(false)}
               >
-                <img
+                <Image
                   src="https://note-keeper.s3.eu-north-1.amazonaws.com/note-keeper-icons/color-palette.png"
                   alt="color-palatte-icon"
-                  className="h-5 w-5 cursor-pointer"
+                  width={20}
+                  height={20}
+                  className="cursor-pointer"
                   onClick={() => setIsColorPalatteOpen(true)}
                   data-tooltip-id="color"
                   data-tooltip-content="Add background"
                 />
-                <img
+                <Image
                   src="https://note-keeper.s3.eu-north-1.amazonaws.com/note-keeper-icons/edit.png"
                   alt="edit-note-icon"
-                  className="h-5 w-5 cursor-pointer"
+                  width={20}
+                  height={20}
+                  className="cursor-pointer"
                   onClick={() => setIsUpdateNoteModalOpen(true)}
                   data-tooltip-id="edit"
                   data-tooltip-content="Edit"
                 />
-                <img
+                <Image
                   src="https://note-keeper.s3.eu-north-1.amazonaws.com/note-keeper-icons/delete.png"
                   alt="delete-note-icon"
-                  className="h-5 w-5 cursor-pointer"
+                  width={20}
+                  height={20}
+                  className="cursor-pointer"
                   onClick={handleDeleteNote}
                   data-tooltip-id="delete"
                   data-tooltip-content="Delete"

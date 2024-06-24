@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 interface Props {
@@ -16,10 +17,12 @@ const Navbar = ({ setCurrentPage }: Props) => {
           setCurrentPage(0);
         }}
       >
-        <img
+        <Image
           src="https://note-keeper.s3.eu-north-1.amazonaws.com/note-keeper-icons/fabicon.png"
           alt="note-keeper-icon"
-          className="h-10 w-10 cursor-pointer hover:scale-105"
+          width={40}
+          height={40}
+          className="cursor-pointer hover:scale-105"
         />
         <span className="font-bold text-gray-50">NoteKeeper</span>
       </div>

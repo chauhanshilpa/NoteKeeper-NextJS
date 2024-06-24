@@ -1,6 +1,7 @@
 import { RxUpdate } from "react-icons/rx";
 import { Tooltip } from "react-tooltip";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface Props {
   noteId: string;
@@ -45,10 +46,12 @@ const UpdateNoteModal = ({
           backgroundPosition: "center",
         }}
       >
-        <img
+        <Image
           src="https://note-keeper.s3.eu-north-1.amazonaws.com/note-keeper-icons/cancel.png"
           alt="cancel"
-          className="h-5 w-5 cursor-pointer self-end hover:scale-125"
+          width={20}
+          height={20}
+          className="cursor-pointer self-end hover:scale-125"
           onClick={() => setIsUpdateNoteModalOpen(false)}
           data-tooltip-id="cancel"
           data-tooltip-content="Cancel"
