@@ -24,11 +24,8 @@ const NotesList = ({
 
   function handleNoteDeleteNavigation() {
     const currentPage = Number(slug);
-    // if()
-    console.log(currentPage)
     if (currentNotesList.length <= 1 && currentPage !== 0 && !isNaN(currentPage)) {
       handlePageNavigation(currentPage - 1);
-      console.log("deleting")
     }
   }
 
