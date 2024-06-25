@@ -7,6 +7,7 @@ import { getNotesList } from "./utils/api";
 import Navbar from "./components/Navbar";
 import { Tooltip } from "react-tooltip";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 function Home() {
   const [notesList, setNotesList] = useState<Note[]>([]);
@@ -38,11 +39,13 @@ function Home() {
     <>
       <Navbar setCurrentPage={setCurrentPage} />
       <div className={`${notesList.length > 0 ? "fixed right-0 p-2" : ""}`}>
-        <img
+        <Image
           src="https://note-keeper.s3.eu-north-1.amazonaws.com/note-keeper-icons/add-a-note.png"
           alt="add-note"
+          width={notesList.length > 0 ? 40 : 240}
+          height={notesList.length > 0 ? 40 : 240}
           className={`bg-[#8cc055] cursor-pointer mt-5 border rounded-lg shadow-lg hover:bg-[#7CB342] ${
-            notesList.length > 0 ? "mr-5 h-10 w-10 ml-2" : "h-60 m-auto mt-10"
+            notesList.length > 0 ? "mr-5 ml-2" : "m-auto mt-10"
           }`}
           onClick={() => setIsAddNoteClicked(true)}
           data-tooltip-id="add-new-note"
