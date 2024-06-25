@@ -1,5 +1,8 @@
 import { RefObject } from "react";
-import { COLORS_LIST, NOTE_BACKGROUND_IMAGES_LIST } from "../utils/constants";
+import {
+  COLORS_LIST,
+  CACHED_NOTE_BACKGROUND_IMAGES_LIST,
+} from "../utils/constants";
 import { v4 as uuidv4 } from "uuid";
 import Image from "next/image";
 
@@ -14,7 +17,6 @@ const ColorPalatte = ({
   handleNoteBackgroundColor,
   handleNoteBackgroundImage,
 }: Props) => {
-
   return (
     <div
       className="color-palatte flex absolute flex-col mr-2 bg-gray-100 rounded-xl border -mt-7"
@@ -31,7 +33,7 @@ const ColorPalatte = ({
         ))}
       </div>
       <div className="flex justify-center gap-1 flex-wrap p-2">
-        {NOTE_BACKGROUND_IMAGES_LIST.map((item) => (
+        {CACHED_NOTE_BACKGROUND_IMAGES_LIST.map((item) => (
           <Image
             key={uuidv4()}
             src={item.src}
