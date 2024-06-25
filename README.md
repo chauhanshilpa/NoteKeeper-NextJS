@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NoteKeeper
 
-## Getting Started
+- [NoteKeeper](#notekeeper)
+  - [UI](#ui)
+  - [Features](#features)
+    - [Responsive Design](#responsive-design)
+    - [Pagination](#pagination)
+  - [Note Management](#note-management)
+  - [Credits](#credits)
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+NoteKeeper is a responsive and user-friendly note-taking application. NoteKeeper is designed to help keep track of thoughts, ideas, and tasks in an organized manner. With its simple UI, one can easily add, edit, delete, and customize notes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![first page](./public/ui_screenshots/note-keeper-first-page.png)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![update note](./public/ui_screenshots//note-keeper-update.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![second page](./public/ui_screenshots//note-keeper-second-page.png)
 
-## Learn More
+## UI
 
-To learn more about Next.js, take a look at the following resources:
+1. Has a navbar with logo. A add icon button on top right of page to add a note.
+2. Has beautiful animations on hovering a note
+3. Has beautiful smooth animation when open or refresh the page.
+4. Has smooth opening of note when clicking on edit.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Responsive Design
 
-## Deploy on Vercel
+Optimized for both desktop and mobile devices.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Pagination
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Each page displays a maximum of 6 notes. When 6 notes are already present on a page, a new page is created for additional notes.
+
+## Note Management
+
+Easily edit, delete, pin and change the background color or image of notes to suit preferences.
+
+## Credits
+
+This application is build using Next.js and Tailwind CSS. Icons are taken by [flaticons](https://www.flaticon.com) as png images and [react-icons](https://react-icons.github.io/react-icons) library. For more advanced animation [framer](https://www.framer.com/motion/introduction) library is used.
