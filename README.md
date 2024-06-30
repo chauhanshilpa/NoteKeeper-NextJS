@@ -17,7 +17,7 @@ NoteKeeper is a responsive and user-friendly note-taking application. NoteKeeper
 
 ![second page](./public/ui_screenshots//note-keeper-second-page.png)
 
-This is a re-implementation of my original project which is in ReactJS: [NoteKeeper-NextJS](https://github.com/chauhanshilpa/NoteKeeper)
+This is a re-implementation of my original project which is in ReactJS: [NoteKeeper](https://github.com/chauhanshilpa/NoteKeeper)
 
 You can try out the application at [link](https://notes-keeper-rho.vercel.app/)
 
